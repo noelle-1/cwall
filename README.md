@@ -1,6 +1,10 @@
 # cwall
 
 **cwall** is a wallpaper application written in C, its my first real C project, and definitely FULL of memory leaks.
+
+## Screenshots
+1. Niri.
+![Niri](https://raw.githubusercontent.com/noelle-1/cwall/main/image.png)
 ## Requirements
 
 Before building cwall, ensure you have the following dependencies installed:
