@@ -64,11 +64,11 @@ ifeq ($(UNAME_S),Linux)
 	
 	install -d $(DESKTOPDIR)
 	cat > $(DESKTOPDIR)/$(TARGET).desktop << EOF
-	[Desktop Entry]
-	Name=MyApp
-	Exec=$(BINDIR)/$(TARGET)
-	Icon=$(ICONDIR)/$(TARGET).png
-	Type=Application
-	EOF
+[Desktop Entry]
+Name=MyApp
+Exec=$(BINDIR)/$(TARGET)
+Icon=$(ICONDIR)/$(TARGET).png
+Type=Application
+EOF
 	
 endif
