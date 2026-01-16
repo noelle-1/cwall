@@ -52,7 +52,7 @@ make
 sudo make install PREFIX=/usr
 ```
 
-This will copy `cwall` to your system's bin directory (e.g., `/usr/local/bin/`).
+This will copy `cwall` to your system's bin directory (e.g., `/usr/bin/`).
 
 ## Usage
 
