@@ -56,19 +56,18 @@ ifeq ($(OS),Windows_NT)
 	$(shell mv ./cwall.exe ./windows_portable/)
 endif
 ifeq ($(UNAME_S),Linux)
-	install -d $(BINDIR)
+	mkdir -pv $(BINDIR)
 	install -m 755 $(TARGET) $(BINDIR)/$(TARGET)
 
-	install -d $(ICONDIR)
+	mkdir -pv $(ICONDIR)
 	install -m 644 assets/${TARGET}.png $(ICONDIR)/${TARGET}.png
 	
-	install -d $(DESKTOPDIR)
-	$(shell \
-        echo "[Desktop Entry]" > $(DESKTOPDIR)/$(TARGET).desktop; \
-        echo "Name=\$(TARGET)" >> $(DESKTOPDIR)/$(TARGET).desktop; \
-        echo "Exec=\$(BINDIR)/\$(TARGET)" >> $(DESKTOPDIR)/$(TARGET).desktop; \
-        echo "Icon=\$(ICONDIR)/\$(TARGET).png" >> $(DESKTOPDIR)/$(TARGET).desktop; \
-        echo "Type=Application" >> $(DESKTOPDIR)/$(TARGET).desktop; \
-    )
-	
+	mkdir -pv $(DESKTOPDIR)
+	$(shell echo "[Desktop Entry]" > $(DESKTOPDIR)/$(TARGET).desktop)
+    $(shell echo "Name=\$(TARGET)" >> $(DESKTOPDIR)/$(TARGET).desktop)
+    $(shell echo "Exec=\$(BINDIR)/\$(TARGET)" >> $(DESKTOPDIR)/$(TARGET).desktop)
+    $(shell echo "Icon=\$(ICONDIR)/\$(TARGET).png" >> $(DESKTOPDIR)/$(TARGET).desktop)
+    $(shell echo "Type=Application" >> $(DESKTOPDIR)/$(TARGET).desktop)
+    $(shell echo "Categories=Utility;Development;" >> $(DESKTOPDIR)/$(TARGET).desktop)
+
 endif
