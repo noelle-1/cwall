@@ -63,11 +63,6 @@ ifeq ($(UNAME_S),Linux)
 	install -m 644 assets/${TARGET}.png $(ICONDIR)/${TARGET}.png
 	
 	mkdir -pv $(DESKTOPDIR)
-	echo "[Desktop Entry]" > $(DESKTOPDIR)/$(TARGET).desktop
-    echo "Name=\$(TARGET)" >> $(DESKTOPDIR)/$(TARGET).desktop
-    echo "Exec=\$(BINDIR)/\$(TARGET)" >> $(DESKTOPDIR)/$(TARGET).desktop
-    echo "Icon=\$(ICONDIR)/\$(TARGET).png" >> $(DESKTOPDIR)/$(TARGET).desktop
-    echo "Type=Application" >> $(DESKTOPDIR)/$(TARGET).desktop
-    echo "Categories=Utility;Development;" >> $(DESKTOPDIR)/$(TARGET).desktop
+	cp assets/$(TARGET).desktop $(DESKTOPDIR)/$(TARGET).desktop
 
 endif
