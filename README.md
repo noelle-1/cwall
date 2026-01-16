@@ -57,10 +57,22 @@ This will copy `cwall` to your system's bin directory (e.g., `/usr/bin/`).
 ## Usage
 
 After installation, you can run the application by executing:
-
+    
+Gui:
 ```bash
-cwall -g
+cwall -g 
+
 ```
+Cli, Apply a wallpaper: 
+```bash
+cwall -w /path/to/a/wallpaper
+```
+
+Cli, Load last applied wallpaper:
+```bash
+cwall -l
+```
+
 You must have a root wallpaper folder specified in the config, the wallpaper folder may contain Subfolders full of pictures <3
 ## Known bugs
 
