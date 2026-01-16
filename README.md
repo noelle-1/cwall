@@ -5,8 +5,9 @@
 
 Before building cwall, ensure you have the following dependencies installed:
 
-- `pkg-config`
-- GTK libraries (e.g., `libgtk-4-dev`)
+- pkg-config
+- GTK libraries
+- libnotify libraries
 
 ## Building from Source
 
@@ -28,7 +29,7 @@ Fill out variables for your system. (config includes examples.)
 
 ```bash
 sudo apt-get update
-sudo apt-get install pkg-config libgtk-4-dev
+sudo apt-get install pkg-config libgtk-4-dev libnotify-dev
 ```
 
 ### On other distributions, use your package manager to install pkg-config and the GTK dev libraries.
