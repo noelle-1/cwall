@@ -1,3 +1,7 @@
+PREFIX ?= /usr/local
+BINDIR = $(PREFIX)/bin
+ICONDIR = $(PREFIX)/share/icons/hicolor/256x256/apps
+DESKTOPDIR = $(PREFIX)/share/applications
 
 CC = gcc
 
@@ -52,8 +56,12 @@ ifeq ($(OS),Windows_NT)
 	$(shell mv ./cwall.exe ./windows_portable/)
 endif
 ifeq ($(UNAME_S),Linux)
-	$(shell mkdir -pv ${HOME}/.local/share/applications/)
-	$(shell mkdir -pv ${HOME}/.local/bin/)
-	cp -fv assets/cwall.desktop ${HOME}/.local/share/applications/
-	cp -fv cwall ${HOME}/.local/bin/
+	install -d $(DESTDIR)$(BINDIR)
+	install -m 755 $(TARGET) $(DESTDIR)$(BINDIR)/$(TARGET)
+
+	install -d $(DESTDIR)$(ICONDIR)
+	install -m 644 assets/${TARGET}.png
+
+	install -d $(DESTDIR)$(DESKTOPDIR)
+	install -m 644 assets/${TARGET}.desktop
 endif
