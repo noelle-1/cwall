@@ -59,7 +59,7 @@ ifeq ($(UNAME_S),Linux)
 	install -d $(BINDIR)
 	install -m 755 $(TARGET) $(BINDIR)/$(TARGET)
 
-	install -d $(DESTDIR)$(ICONDIR)
+	install -d $(ICONDIR)
 	install -m 644 assets/${TARGET}.png $(ICONDIR)/${TARGET}.png
 	
 	install -d $(DESKTOPDIR)
