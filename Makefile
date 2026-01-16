@@ -1,4 +1,4 @@
-PREFIX ?= /usr/local
+PREFIX ?= /usr
 BINDIR = $(PREFIX)/bin
 ICONDIR = $(PREFIX)/share/icons/hicolor/256x256/apps
 DESKTOPDIR = $(PREFIX)/share/applications
