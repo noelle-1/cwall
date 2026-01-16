@@ -56,12 +56,19 @@ ifeq ($(OS),Windows_NT)
 	$(shell mv ./cwall.exe ./windows_portable/)
 endif
 ifeq ($(UNAME_S),Linux)
-	install -d $(DESTDIR)$(BINDIR)
-	install -m 755 $(TARGET) $(DESTDIR)$(BINDIR)/$(TARGET)
+	install -d $(BINDIR)
+	install -m 755 $(TARGET) $(BINDIR)/$(TARGET)
 
 	install -d $(DESTDIR)$(ICONDIR)
-	install -m 644 assets/${TARGET}.png
-
-	install -d $(DESTDIR)$(DESKTOPDIR)
-	install -m 644 assets/${TARGET}.desktop
+	install -m 644 assets/${TARGET}.png $(ICONDIR)/${TARGET}.png
+	
+	install -d $(DESKTOPDIR)
+	cat > $(DESKTOPDIR)/$(TARGET).desktop << EOF
+[Desktop Entry]
+Name=MyApp
+Exec=$(BINDIR)/$(TARGET)
+Icon=$(ICONDIR)/$(TARGET).png
+Type=Application
+EOF
+	
 endif
