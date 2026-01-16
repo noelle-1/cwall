@@ -63,12 +63,12 @@ ifeq ($(UNAME_S),Linux)
 	install -m 644 assets/${TARGET}.png $(ICONDIR)/${TARGET}.png
 	
 	install -d $(DESKTOPDIR)
-	cat > $(DESKTOPDIR)/$(TARGET).desktop << EOF
-[Desktop Entry]
-Name=MyApp
-Exec=$(BINDIR)/$(TARGET)
-Icon=$(ICONDIR)/$(TARGET).png
-Type=Application
-EOF
+	$(shell \
+        echo "[Desktop Entry]" > $(DESTDIR)$(DESKTOPDIR)/$(TARGET).desktop; \
+        echo "Name=\$(TARGET)" >> $(DESTDIR)$(DESKTOPDIR)/$(TARGET).desktop; \
+        echo "Exec=\$(BINDIR)/\$(TARGET)" >> $(DESTDIR)$(DESKTOPDIR)/$(TARGET).desktop; \
+        echo "Icon=\$(ICONDIR)/\$(TARGET).png" >> $(DESTDIR)$(DESKTOPDIR)/$(TARGET).desktop; \
+        echo "Type=Application" >> $(DESTDIR)$(DESKTOPDIR)/$(TARGET).desktop; \
+    )
 	
 endif
