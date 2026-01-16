@@ -69,3 +69,7 @@ You must have a root wallpaper folder specified in the config, the wallpaper fol
 2. Memory leaks, i believe my code is pretty bad, and it was written over a year ago. there WILL be memory leaks im sure. but the application does not suffer from segfaults or crashes.
 
 3. Windows support is broken, i dont remember how to build it for windows, i will update the readme with instructions in the future
+
+4. Image file names with spaces may or may not work properly. sometimes will just show up as a blank empty image.
+
+5. Webp support is not available. only JPG, PNG, JPEG.
