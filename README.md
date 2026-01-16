@@ -5,11 +5,10 @@
 ## Screenshots
 1. Niri.
 ![Niri](https://raw.githubusercontent.com/noelle-1/cwall/main/image.png)
-## Requirements
 2. Linux Mint.
 ![Mint](https://raw.githubusercontent.com/noelle-1/cwall/main/niri-2026-01-16%2002-44-27.png)
 
-## Info
+## Requirements
 Before building cwall, ensure you have the following dependencies installed:
 
 - pkg-config
