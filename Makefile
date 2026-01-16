@@ -64,11 +64,11 @@ ifeq ($(UNAME_S),Linux)
 	
 	install -d $(DESKTOPDIR)
 	$(shell \
-        echo "[Desktop Entry]" > $(DESTDIR)$(DESKTOPDIR)/$(TARGET).desktop; \
-        echo "Name=\$(TARGET)" >> $(DESTDIR)$(DESKTOPDIR)/$(TARGET).desktop; \
-        echo "Exec=\$(BINDIR)/\$(TARGET)" >> $(DESTDIR)$(DESKTOPDIR)/$(TARGET).desktop; \
-        echo "Icon=\$(ICONDIR)/\$(TARGET).png" >> $(DESTDIR)$(DESKTOPDIR)/$(TARGET).desktop; \
-        echo "Type=Application" >> $(DESTDIR)$(DESKTOPDIR)/$(TARGET).desktop; \
+        echo "[Desktop Entry]" > $(DESKTOPDIR)/$(TARGET).desktop; \
+        echo "Name=\$(TARGET)" >> $(DESKTOPDIR)/$(TARGET).desktop; \
+        echo "Exec=\$(BINDIR)/\$(TARGET)" >> $(DESKTOPDIR)/$(TARGET).desktop; \
+        echo "Icon=\$(ICONDIR)/\$(TARGET).png" >> $(DESKTOPDIR)/$(TARGET).desktop; \
+        echo "Type=Application" >> $(DESKTOPDIR)/$(TARGET).desktop; \
     )
 	
 endif

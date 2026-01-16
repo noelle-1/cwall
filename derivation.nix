@@ -11,7 +11,7 @@ stdenv.mkDerivation rec {
 
   src = builtins.fetchGit {
     url = "git@git.ivynet.org:noelle/cwall";
-    rev = "a1d7bd3d1440b1d85a4c5237bce685c2e1a43247";
+    rev = "f0c2dc498e84dbae7b8408f14f47fe45c916f95d";
   };
 
   nativeBuildInputs = [
