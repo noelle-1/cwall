@@ -43,7 +43,7 @@ make
 5. Install the application system-wide (optional):
 
 ```bash
-sudo make install PREFIX=/usr/local
+sudo make install PREFIX=/usr
 ```
 
 This will copy `cwall` to your system's bin directory (e.g., `/usr/local/bin/`).
@@ -55,8 +55,11 @@ After installation, you can run the application by executing:
 ```bash
 cwall -g
 ```
-You must have a root wallpaper folder specified in the config, the wallpaper folder may contain Subfolders.
+You must have a root wallpaper folder specified in the config, the wallpaper folder may contain Subfolders full of pictures <3
 ## Known bugs
 
 1. If atleast 1 image file is not present in the root wallpaper folder, but the subdirectories contain images, the application will fail to open stating "Folder must contain atleast 1 wallpaper". to solve this just have atleast 1 "wallpaper" in the root folder you specified.
+
 2. Memory leaks, i believe my code is pretty bad, and it was written over a year ago. there WILL be memory leaks im sure. but the application does not suffer from segfaults or crashes.
+
+3. Windows support is broken, i dont remember how to build it for windows, i will update the readme with instructions in the future
